@@ -397,14 +397,14 @@ export default function App() {
       )}
 
       <div className="max-w-6xl mx-auto">
-
         {/* Header */}
         <div className="text-center mb-12 animate-in">
           <h1 className="heading-font text-5xl font-bold mb-2 text-gray-800">
             Confidence Tracker
           </h1>
           <p className="text-lg text-gray-600 mb-4">
-            Welcome back, <span className="font-semibold text-teal-600">{userName}</span>
+            Welcome back,{" "}
+            <span className="font-semibold text-teal-600">{userName}</span>
           </p>
           <p className="text-base text-gray-500">
             Track your coding skills and watch your confidence grow
@@ -440,24 +440,44 @@ export default function App() {
           </div>
           <button
             onClick={() => {
-              const details = document.getElementById('legend-details');
-              details.classList.toggle('hidden');
+              const details = document.getElementById("legend-details");
+              details.classList.toggle("hidden");
             }}
             className="mt-4 text-sm text-teal-600 font-semibold hover:text-teal-700 mx-auto block"
           >
             View detailed descriptions ↓
           </button>
           <div id="legend-details" className="hidden mt-4 space-y-2 text-sm">
-            <div className="flex gap-2"><strong>1:</strong> I just learned this exists</div>
-            <div className="flex gap-2"><strong>2:</strong> I've seen examples of this</div>
-            <div className="flex gap-2"><strong>3:</strong> I can follow along with guidance</div>
-            <div className="flex gap-2"><strong>4:</strong> I finished assignments, but it feels fuzzy</div>
-            <div className="flex gap-2"><strong>5:</strong> I understand the basics</div>
-            <div className="flex gap-2"><strong>6:</strong> I can complete tasks independently</div>
-            <div className="flex gap-2"><strong>7:</strong> I could redo assignments more quickly</div>
-            <div className="flex gap-2"><strong>8:</strong> I can solve new problems with this skill</div>
-            <div className="flex gap-2"><strong>9:</strong> I could teach this to another student</div>
-            <div className="flex gap-2"><strong>10:</strong> I could teach this to a brand new developer</div>
+            <div className="flex gap-2">
+              <strong>1:</strong> 😳 I just learned this exists
+            </div>
+            <div className="flex gap-2">
+              <strong>2:</strong> 👀 I've seen examples of this
+            </div>
+            <div className="flex gap-2">
+              <strong>3:</strong> 🤔 I can follow along with guidance
+            </div>
+            <div className="flex gap-2">
+              <strong>4:</strong> 😅 I finished assignments, but it feels fuzzy
+            </div>
+            <div className="flex gap-2">
+              <strong>5:</strong> 🙂 I understand the basics
+            </div>
+            <div className="flex gap-2">
+              <strong>6:</strong> 😊 I can complete tasks independently
+            </div>
+            <div className="flex gap-2">
+              <strong>7:</strong> 💬 I can talk about my own code
+            </div>
+            <div className="flex gap-2">
+              <strong>8:</strong> 💡 I can solve new problems with this skill
+            </div>
+            <div className="flex gap-2">
+              <strong>9:</strong> 🤓 I can talk about other people's code with this skill
+            </div>
+            <div className="flex gap-2">
+              <strong>10:</strong> 🌟 I could teach this to a brand new developer
+            </div>
           </div>
         </div>
 
@@ -648,16 +668,16 @@ export default function App() {
                   // Get score description
                   const getScoreDescription = (score) => {
                     const descriptions = {
-                      1: "I just learned this exists",
-                      2: "I've seen examples of this",
-                      3: "I can follow along with guidance",
-                      4: "I finished assignments, but it feels fuzzy",
-                      5: "I understand the basics",
-                      6: "I can complete tasks independently",
-                      7: "I could redo assignments more quickly",
-                      8: "I can solve new problems with this skill",
-                      9: "I could teach this to another student",
-                      10: "I could teach this to a brand new developer",
+                      1: "😳 I just learned this exists",
+                      2: "👀 I've seen examples of this",
+                      3: "🤔 I can follow along with guidance",
+                      4: "😅 I finished assignments, but it feels fuzzy",
+                      5: "🙂 I understand the basics",
+                      6: "😊 I can complete tasks independently",
+                      7: "💬 I can talk about my own code",
+                      8: "💡 I can solve new problems with this skill",
+                      9: "🤓 I can talk about other people's code with this skill",
+                      10: "🌟 I could teach this to a brand new developer",
                     };
                     return descriptions[score] || "";
                   };
